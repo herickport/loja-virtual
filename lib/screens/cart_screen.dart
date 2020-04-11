@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:loja_virtual/models/cart_model.dart';
 import 'package:loja_virtual/models/user_model.dart';
 import 'package:loja_virtual/screens/login_screen.dart';
+import 'package:loja_virtual/screens/order_screen.dart';
 import 'package:loja_virtual/tiles/cart_tile.dart';
 import 'package:loja_virtual/widgets/cart_price.dart';
 import 'package:loja_virtual/widgets/discount_card.dart';
@@ -39,6 +40,7 @@ class CartScreen extends StatelessWidget {
           } else if(!UserModel.of(context).isLoggedIn()) {
             return Container(
               padding: EdgeInsets.all(16.0),
+              alignment: Alignment.center,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -102,9 +104,11 @@ class CartScreen extends StatelessWidget {
                 ShipCard(),
                 CartPrice(() async {
                   String orderId = await model.finishOrder();
-                  
-                  if(orderId != null)
-                    print(orderId);
+                  if(orderId != null) {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => OrderScreen(orderId))
+                    );
+                  }
                 })
               ],
             );
