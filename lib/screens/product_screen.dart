@@ -6,6 +6,7 @@ import 'package:loja_virtual/models/cart_model.dart';
 import 'package:loja_virtual/models/user_model.dart';
 import 'package:loja_virtual/screens/cart_screen.dart';
 import 'package:loja_virtual/screens/login_screen.dart';
+import 'package:loja_virtual/widgets/cart_button.dart';
 
 class ProductScreen extends StatefulWidget {
 
@@ -35,6 +36,7 @@ class _ProductScreenState extends State<ProductScreen> {
         title: Text(product.title),
         centerTitle: true,
       ),
+      floatingActionButton: CartButton(),
       body: ListView(
         children: <Widget>[
           AspectRatio(
@@ -125,6 +127,7 @@ class _ProductScreenState extends State<ProductScreen> {
                           cartProduct.quantity = 1;
                           cartProduct.pid = product.id;
                           cartProduct.category = product.category;
+                          cartProduct.productData = product;
 
                           CartModel.of(context).addCartItem(cartProduct);
 
