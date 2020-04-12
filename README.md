@@ -1,16 +1,35 @@
-# loja_virtual
+<h1 align="center">
+    Loja Virtual
+</h1>
 
-A new Flutter project.
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
+</p>
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+<p align="center">
+  <img alt="LojaVirtual" src=".github/loja-virtual.png" width="100%">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## :rocket: Tecnologias
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter](https://flutter.dev/)
+- [Firebase](https://firebase.google.com/)
+
+## 💻 Projeto
+
+- O projeto é a versão do cliente de uma loja virtual, desenvolvida no [curso de criação de Apps com Flutter](https://www.udemy.com/course/curso-completo-flutter-app-android-ios/) para aprimoramento de conhecimento no desenvolvimento mobile com Flutter.
+- O app simula todo o processo de navegação e compra em uma loja virtual, com exceção da conexão com api de pagamentos.
+
+## 🤔 Como testar
+
+- Faça um clone desse repositório: `git clone https://github.com/herickport/loja-virtual.git`;
+
+- Utilizando um emulator ou dispositivo físico e com o flutter instalado na máquina, rode o comando: `flutter run`;
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
